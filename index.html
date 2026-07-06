@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spain vs Portugal Match</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111, #000);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* MAIN CARD */
+.banner {
+  width: 90%;
+  max-width: 1000px;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  animation: glow 3s infinite alternate;
+}
+
+/* glowing animation */
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(255,0,0,0.3); }
+  100% { box-shadow: 0 0 40px rgba(0,100,255,0.4); }
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #c8102e, #0038a8);
+}
+
+/* PLAYERS AREA */
+.teams {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* PLAYER CARD */
+.player {
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.player:hover {
+  transform: scale(1.1);
+}
+
+.player img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* FLAGS */
+.flag {
+  width: 80px;
+  margin-top: 10px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* VS TEXT */
+.vs {
+  font-size: 40px;
+  font-weight: bold;
+  color: gold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* CTA BUTTON */
+button {
+  display: block;
+  margin: 20px auto 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff0000, #0033ff);
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .teams {
+    flex-direction: column;
+  }
+
+  .vs {
+    margin: 20px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner">
+
+  <div class="header">
+    🔥 SPAIN 🇪🇸 VS PORTUGAL 🇵🇹 🔥
+  </div>
+
+  <div class="teams">
+
+    <!-- SPAIN / RONALDO SIDE -->
+    <div class="player">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" class="flag">
+      <img src="https://data.cyclowiki.org/images/1/1b/Kto-takoj-lamin-yamal.jpg" alt="Ronaldo">
+      <p>Spain Squad</p>
+    </div>
+
+    <div class="vs">VS</div>
+
+    <!-- PORTUGAL / RONALDO -->
+    <div class="player">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" class="flag">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="Ronaldo">
+      <p>Portugal Squad</p>
+    </div>
+
+  </div>
+
+  <button onclick="openMatch()"
+    Узнать больше 🔥
+  </button>
+
+</div>
+
+<script>
+function openMatch() {
+  console.log("Матч Испания vs Португалия открыт!");
+  window.open("https://www.google.com/search?q=Spain+vs+Portugal+football", "_blank");
+}
+</script>
+
+</body>
+</html>
